@@ -31,7 +31,7 @@ create table if not exists `Group`(
 	`GroupID` tinyint primary key auto_increment,
     `GroupName` varchar(50),
     `CreatorID` tinyint unique key,
-    `CreateDate:` date
+    `CreateDate` date
 );
 
 drop table if exists `GroupAccount`;
