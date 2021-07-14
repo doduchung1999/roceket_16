@@ -25,14 +25,14 @@ create or replace view v_cau2 as
                 group by AccountID) as A1);
 select * from v_cau2;
 
-/*##question3: Tạo view có chứa câu hỏi có những content quá dài (content quá 16 từ được coi là quá dài) và xóa nó đi
+##question3: Tạo view có chứa câu hỏi có những content quá dài (content quá 16 từ được coi là quá dài) và xóa nó đi
 create or replace view V_cau3 as
 	select * from question 
     where length(content) > 16;
 select * from v_cau3;
-delete from question where (length(content) = (select * from V_cau3));
-*/
-#cau 3 lam chua ra dc ket qua
+delete from v_cau3;
+
+#cau 3 lam chua ra dc ket qua*/
 
 #question4: Tạo view có chứa danh sách các phòng ban có nhiều nhân viên nhất
 create or replace view v_cau4 as
